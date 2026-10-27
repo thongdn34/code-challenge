@@ -3,7 +3,7 @@ import { formatAmount, normalizePrices, parseAmount, quote, type TokenPrice } fr
 
 // The interview endpoint does not advertise browser CORS access. Bundle its public
 // reference snapshot so the static app works without a proxy or live service.
-const PRICE_URL = '/prices.json';
+const PRICE_URL = `${import.meta.env.BASE_URL}prices.json`;
 const iconUrl = (currency: string) => `https://raw.githubusercontent.com/Switcheo/token-icons/main/tokens/${encodeURIComponent(currency)}.svg`;
 
 function TokenIcon({ currency }: { currency: string }) {
